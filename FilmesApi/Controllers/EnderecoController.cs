@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using FilmesApi.Data;
 using FilmesApi.Models;
-using FilmesAPI.Data.Dtos;
+using FilmesApi.Data.Dtos;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
