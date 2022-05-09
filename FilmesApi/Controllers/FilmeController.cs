@@ -47,7 +47,9 @@ namespace FilmesApi.Controllers
             }
             else
             {
+                
                 ReadFilmeDto filmeDto = _mapper.Map<ReadFilmeDto>(filme);
+                filmeDto.HoraConsulta = DateTime.Now;
                 return Ok(filmeDto);
             }
             
