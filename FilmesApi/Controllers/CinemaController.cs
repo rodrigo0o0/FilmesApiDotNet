@@ -21,6 +21,7 @@ namespace FilmesAPI.Controllers
 
         public CinemaController(AppDbContext context, IMapper mapper)
         {
+
             _context = context;
             _mapper = mapper;
         }
@@ -44,6 +45,7 @@ namespace FilmesAPI.Controllers
         [HttpGet("{id}")]
         public IActionResult RecuperaCinemasPorId(int id)
         {
+            
             Cinema cinema = _context.Cinemas.FirstOrDefault(cinema => cinema.Id == id);
             if (cinema != null)
             {
@@ -56,6 +58,7 @@ namespace FilmesAPI.Controllers
         [HttpPut("{id}")]
         public IActionResult AtualizaCinema(int id, [FromBody] UpdateCinemaDto cinemaDto)
         {
+            
             Cinema cinema = _context.Cinemas.FirstOrDefault(cinema => cinema.Id == id);
             if (cinema == null)
             {
