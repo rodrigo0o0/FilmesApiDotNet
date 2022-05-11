@@ -18,6 +18,14 @@ namespace FilmesApi.Controllers
             _context = context;
             _mapper = mapper;
         }
+
+        [HttpGet]
+        public IActionResult RecuperarGerente()
+        {
+            return Ok(_context.Gerentes);
+        }
+
+
         [HttpPost]
         public IActionResult AdicionaGerente([FromBody]CreateGerenteDto dto)
         {

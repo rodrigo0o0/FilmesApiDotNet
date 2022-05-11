@@ -37,9 +37,9 @@ namespace FilmesAPI.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Cinema> RecuperaCinemas([FromQuery] string nomeDoFilme)
+        public IActionResult RecuperaCinemas()
         {
-            return _context.Cinemas;
+            return Ok(_context.Cinemas);
         }
 
         [HttpGet("{id}")]
